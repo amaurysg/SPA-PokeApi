@@ -1,17 +1,23 @@
-const Character = () => {
+import getHash from "../utils/getHash"
+import getPokemon from "../utils/getPokemon"
+
+const Character = async () => {
+  const id = getHash()
+  const pokemon = await getPokemon(id)
+ 
+
   const view = `
     <div class="Characters-inner">
       <article class="Characters-card">
-        <img src="image" alt="name">
-        <h2>Name</h2>
+        <img src="${pokemon.sprites.front_default}" alt="name">
+        <h2>${pokemon.name}</h2>
       </article>
       <article class="Characters-card">
-        <h3>Episodes:</h3>
-        <h3>Status:</h3>
-        <h3>Species:</h3>
-        <h3>Gender:</h3>
-        <h3>Origin:</h3>
-        <h3>Last Location:</h3>
+        <h3>Number: ${pokemon.id}</h3>
+        <h3>Type: ${pokemon.types[0].type.name}</h3>
+        <h3>Moves: ${pokemon.moves[1].move.name}</h3>
+        <h3>Ability: ${pokemon.abilities[1].ability.name}</h3>
+     
       </article>
     </div>
   `;
