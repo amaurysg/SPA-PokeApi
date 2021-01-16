@@ -13,7 +13,8 @@ const Home = async () => {
   ${arrayPokemon.map( (pokemon) => `
     <article class="Characters-item">
         <a href="#/${pokemon.id} ">
-          <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}"/>
+          <img src="${pokemon.sprites.other.dream_world.front_default}" alt="${pokemon.name}"/>
+          
           <h2>${pokemon.name} </h2>
         </a>
     </article>`

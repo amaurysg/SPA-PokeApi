@@ -5,12 +5,12 @@ const Header = () => {
   <div className="Header-logo">
     <h1>
       <a href="">
-        PokeApi
+        SPA Pokemón
       </a>
     </h1>
   </div>
   <div className="Header-nav">
-    <a href="#/about/">About</a>
+    <a href="#/About/">About</a>
   </div>
 </div>
 `;
