@@ -5,7 +5,7 @@ const Header = () => {
   <div className="Header-logo">
     <h1>
       <a href="">
-        SPA Pokemón
+      <h2>SPA Pokémon</h2>
       </a>
     </h1>
   </div>

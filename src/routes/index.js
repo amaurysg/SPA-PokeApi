@@ -21,7 +21,6 @@ const router = async () => {
   // stablishing templates to dom
   const header = null || document.getElementById("header");
   const content = null || document.getElementById("content");
-  const card = null || document.getElementById(".Characters-inner-container")
   
   header.innerHTML = await Header();
   let hash = getHash();
@@ -30,9 +29,7 @@ const router = async () => {
   let render = routes[route] ? routes[route] : About;
   content.innerHTML = await render();
 
-
-
-
+return route
 
 };
 

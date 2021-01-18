@@ -3,7 +3,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+
   color: #3c484e;
   font-family: "Open Sans", sans-serif;
 }
@@ -17,6 +17,16 @@ body {
 .Header a {
   text-decoration: none;
   color: #15302c;
+}
+.Header-logo_img {
+  width: 250px;
+  height: 150px;
+
+  border: 1px solid red;
+  background-image: url("../assets/logo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .Main {
@@ -36,27 +46,30 @@ body {
 }
 
 .Characters-inner-container {
-  border: blue solid 1px;
-
+  width: 50%;
+  display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
 }
 .Characters-inner-card {
-  border: red solid 2px;
   transform-style: preserve-3d;
   min-height: 80vh;
   width: 35rem;
   border-radius: 30px;
   padding: 0rem 5rem;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
-  margin: 0 auto;
 }
 
 .Characters-card_img {
   position: relative;
-  border: purple solid 1px;
+  /*   border: purple solid 1px; */
   bottom: -70px;
   text-align: center;
+  z-index: 2;
+  transition: all 0.75s ease-out;
+}
+.img {
   z-index: 2;
   transition: all 0.75s ease-out;
 }
@@ -67,12 +80,12 @@ body {
   /* height: 15rem; */
   background: linear-gradient(
     to right,
-    rgba(245, 70, 66, 0.75),
-    rgba(8, 83, 156, 0.75)
+    rgba(29, 147, 158, 1) 26%,
+    rgba(40, 44, 142, 1) 81%
   );
   position: absolute;
   border-radius: 50%;
-  z-index: 1;
+  z-index: -1;
   right: calc(50% - 125px);
 }
 
@@ -81,46 +94,86 @@ body {
   top: -25px;
   height: 200px;
   width: 200px;
-  border: red solid 1px;
+  /* border: red solid 1px; */
   z-index: 2;
   transition: all 0.75s ease-out;
   position: absolute;
 }
 
 .Characters-card_details {
+  padding: 10px;
   height: 350px;
   width: 80%;
-  padding-top: 50px;
+  padding-top: 75px;
   text-align: center;
-  border: 1px purple solid;
+  border: purple 1px solid;
   border-radius: 15px;
   margin: 0 auto;
+  z-index: -1;
 }
 .Characters-card_details h2 {
   margin: 0 auto;
+  margin-top: 25px;
   color: white;
-  background: -webkit-gradient(
-    linear,
-    80% 20%,
-    10% 21%,
-    from(#00ffff),
-    to(#004ec3)
+  background: linear-gradient(
+    to right,
+    rgba(29, 147, 158, 1) 26%,
+    rgba(40, 44, 142, 1) 81%
   );
   /* background: forestgreen; */
   text-transform: capitalize;
   font-size: 2.5em;
-  width: 40%;
+  width: 100%;
   border-radius: 25px;
 }
 
 .Characters-item {
-  border-radius: 30px;
-  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
-  padding: 10px;
+  /* border-radius: 30px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2); */
+  /*  width: 200px; */
+  height: auto;
+  position: relative;
+
+  /* clip-path: polygon(0 0, 80% 0, 100% 20%, 100% 100%, 20% 100%, 0 80%); */
 }
 .Characters-item img {
   height: 225px;
   width: 218px;
+}
+.circle_id {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+
+  background: linear-gradient(
+    to right,
+    rgba(29, 147, 158, 1) 26%,
+    rgba(40, 44, 142, 1) 81%
+  );
+  right: 0;
+  position: absolute;
+}
+.circle_id p {
+  color: white;
+  font-size: 1.5em;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 8px;
+}
+.figure {
+  height: 250px;
+  width: 250px;
+  background: linear-gradient(
+    to right,
+    rgba(29, 147, 158, 1) 26%,
+    rgba(40, 44, 142, 1) 81%
+  );
+  position: absolute;
+  top: 0;
+  clip-path: polygon(0 0, 80% 0, 100% 20%, 100% 100%, 20% 100%, 0 80%);
+  border-radius: 50%;
+  z-index: -1;
 }
 .Characters-item a {
   text-transform: capitalize;
@@ -129,6 +182,44 @@ body {
   text-align: center;
 }
 
+.Characters-item a h2 {
+  /*  background: linear-gradient(
+    to right,
+    rgba(245, 70, 66, 0.75),
+    rgba(8, 83, 156, 0.75)
+  ); */
+  background: linear-gradient(
+    to left,
+    rgba(29, 147, 158, 1) 26%,
+    rgba(40, 44, 142, 1) 81%
+  );
+  color: white;
+  border-radius: 30px;
+  margin: 0 auto;
+  margin-top: 25px;
+  width: 80%;
+}
+.tittle-more {
+  /* border: 1px solid red; */
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  margin-top: 20px;
+  justify-self: stretch;
+  gap: 20px;
+}
+.tittle-more h3 {
+  color: white;
+  justify-self: stretch;
+  align-content: stretch;
+  background: linear-gradient(
+    to left,
+    rgba(29, 147, 158, 1) 26%,
+    rgba(40, 44, 142, 1) 81%
+  );
+  padding: 10px;
+  margin: auto 0;
+  clip-path: polygon(0 0, 91% 0, 100% 25%, 100% 100%, 10% 100%, 0 76%);
+}
 /*
 .Characters-card {
   text-decoration: none;

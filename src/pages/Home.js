@@ -12,10 +12,12 @@ const Home = async () => {
   <div class="Characters">
   ${arrayPokemon.map( (pokemon) => `
     <article class="Characters-item">
+
         <a href="#/${pokemon.id} ">
           <img src="${pokemon.sprites.other.dream_world.front_default}" alt="${pokemon.name}"/>
+          <div class="figure"></div>
           
-          <h2>${pokemon.name} </h2>
+          <h2>  ${pokemon.name} </h2>
         </a>
     </article>`
     )

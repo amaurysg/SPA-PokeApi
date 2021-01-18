@@ -1,5 +1,14 @@
 //importamos routers
 import router from './routes'
+import animation3D from "./utils/animation3D"
 
-window.addEventListener("load", router)
-window.addEventListener("hashchange", router)
+const onLoad = async () => {
+    const route = await router()
+
+    if(route === '/:id'){
+        await animation3D()     
+    }
+}
+
+window.addEventListener("load", onLoad)
+window.addEventListener("hashchange", onLoad)
