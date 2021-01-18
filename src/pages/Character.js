@@ -19,7 +19,7 @@ const Character = async () => {
   <div class="Characters-inner-card">
   <article class="Characters-card_img">
   <div class="circle"></div>
-  <div class="circle_id"><p>${pokemon.id}</p></div>
+  <div class="circle_id"><p></p>${pokemon.id}</div>
   <img  class="img" src="${pokemon.sprites.other.dream_world.front_default}"  alt="name">
   </article>
   <article class="Characters-card_details">
@@ -36,8 +36,7 @@ const Character = async () => {
   
   
   `;
-  
-console.log(view)
+
   
   return view;
 };
