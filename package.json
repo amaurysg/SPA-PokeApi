@@ -1,13 +1,15 @@
 {
+  "homepage": "https://amaurysg.github.io/SPA-PokeApi/",
   "name": "spapokeapi",
   "version": "1.0.0",
   "description": "Single Page Application Pokemon",
   "main": "index.js",
-  "homepage": "https://amaurysg.github.io/SPA-PokeApi/",
   "scripts": {
  
     "build": "webpack --mode production",
-    "start": "webpack-cli serve --open --mode development"
+    "start": "webpack-cli serve --open --mode development",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
     
   },
   "keywords": [
